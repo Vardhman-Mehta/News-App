@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>News App</title>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#">
+            <img src="/assets/Logo1.jpeg" alt="Company Logo">
+        </a>
+
+        <div class="nav-links">
+            <ul>
+                <li class="hover-link">Sports</li>
+                <li class="hover-link">Politics</li>
+                <li class="hover-link">Education</li>
+                <li class="hover-link">Finance</li>
+            </ul>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="eg Virat Kohli">
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="cards-container">
+            <template id="template-card">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="https://via.placeholder.com/200x200" alt="news image">
+                    </div>
+                    <div class="card-content">
+                        <h3 id="news-title">This is the title</h3>
+                        <h6 class="news-source" id="news-source">End Gadget 29/9/2024</h6>
+                        <p class="news-description" id="news-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime libero laborum ea consequuntur est consequatur facere inventore dolores dolore commodi?</p>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+
+    <div class="footer">
+
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- 
+
+In HTML, a template refers to an element that can hold markup that will not be rendered immediately 
+when the page is loaded. Instead, the content inside a <template> tag is kept in the DOM but is not 
+displayed until it is explicitly cloned and inserted into the document using JavaScript.
+
+    How to Use a Template
+    
+    <template>
+        <div>
+            <h2>Title</h2>
+            <p>This content will not be displayed until it is instantiated.</p>
+        </div>
+    </template>
+
+
+    Characteristics of <template>
+    Not Rendered: The content within the <template> tag is not rendered when the page loads. It is inert until manipulated with JavaScript.
+    Reusable: You can create multiple instances of the content in the template without rewriting the markup.
+    Can Contain Any HTML: You can put any valid HTML inside the template, including other tags, text, and even styles.
+    When to Use a Template
+    Templates are particularly useful in the following scenarios:
+    
+    Dynamic Content Generation: When you need to generate content dynamically (e.g., creating a list of items based on user input, server responses, etc.).
+    
+    Reducing Repetition: If you have repeated sections of HTML that you want to manage easily, a template helps keep your code clean and maintainable.
+    
+    Single-Page Applications: In frameworks like React, Angular, or Vue, templates are often used to define reusable components.
+    
+    Example: Using a Template
+    Here’s an example demonstrating how to use a <template> tag with JavaScript:
+    
+    html
+    Copy code
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Template Example</title>
+    </head>
+    <body>
+    
+    <template id="my-template">
+        <div class="card">
+            <h2 class="title"></h2>
+            <p class="description"></p>
+        </div>
+    </template>
+    
+    <div id="container"></div>
+    
+    <script>
+        const template = document.getElementById('my-template');
+        const container = document.getElementById('container');
+    
+        // Data to be displayed
+        const data = [
+            { title: 'Title 1', description: 'Description for title 1' },
+            { title: 'Title 2', description: 'Description for title 2' },
+            { title: 'Title 3', description: 'Description for title 3' },
+        ];
+    
+        // Loop through the data and clone the template
+        data.forEach(item => {
+            const clone = document.importNode(template.content, true);
+            clone.querySelector('.title').textContent = item.title;
+            clone.querySelector('.description').textContent = item.description;
+            container.appendChild(clone);
+        });
+    </script>
+    
+    </body>
+    </html>
+    
+    Explanation of the Example
+    Template Definition: A <template> tag with an id of my-template contains a card structure.
+    JavaScript: The script retrieves the template, loops through an array of data, clones the template for each item, fills in the title and description, and then appends it to a container in the DOM.
+    Dynamic Content: The content is dynamically generated based on the array, demonstrating how templates can be useful for creating structured HTML dynamically. -->

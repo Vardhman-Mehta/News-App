@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Oswald', 'Times New Roman', Times, serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.navbar{
+    width: 100%;
+    height: 4rem;
+    background-color: rgba(0,14,43,255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    box-shadow: 0 0 400px #707289;
+}
+
+.navbar a{
+    height: 100%;
+    margin-left: 1rem;
+}
+
+.navbar img{
+    height: 100%;
+    /* width: 4rem; */
+}
+
+.nav-links{
+    width: 40%;
+}
+
+.nav-links ul{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    list-style: none;   
+}
+
+.search-bar{
+    margin-right: 2rem;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.hover-link:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.hover-link:active{
+    color: #b37575;
+}
+
+.search-bar{
+    height: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.search-input{
+    height: 100%;
+    box-sizing: border-box;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    border: none;
+    padding-inline-start: 1rem;
+    background-color: #F0F0F0;
+    font-family: 'Oswald', 'Times New Roman', Times, serif;
+}
+
+.search-bar input:focus{
+    border: none;
+    background-color: rgb(227, 228, 232);
+}
+
+.search-bar button{
+    height: 100%;
+    width: 2rem;
+    border: none;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.search-bar button:hover{
+    background-color: rgb(156, 161, 220);
+}
+
+
+/* ##CONTENT## */
+
+.content{
+    margin-top: 2%;
+    box-sizing: border-box;
+}
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 1rem;
+    column-gap: 1rem;
+    /* background-color: #b37575; */
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(189, 212, 74);
+    box-shadow: 0 0 4px black;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 1rem 1rem 1rem;
+}
+
+.card-header{
+    margin: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.card:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 12px black;
+}
+
+.news-source{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
