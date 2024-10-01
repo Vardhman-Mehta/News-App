@@ -49,6 +49,10 @@ ul{
     list-style: none;   
 }
 
+.hover-link.active{
+    color: rgba(0, 255, 0, 0.7);
+}
+
 .search-bar{
     margin-right: 2rem;
     /* display: flex;
@@ -104,7 +108,7 @@ ul{
 
 .content{
     margin-top: 2%;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 .cards-container{
@@ -119,36 +123,45 @@ ul{
 
 .card{
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: rgb(189, 212, 74);
+    background-color: rgb(163, 171, 226);
     box-shadow: 0 0 4px black;
     border-radius: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card-header{
+    margin: 1rem 1rem 0 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    height: 180px;
+}
+
+.card-header img{
+    width:100%;
+    height: 180px;
+    object-fit: cover;
 }
 
 .card-content{
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: start;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     flex-wrap: wrap;
     margin: 0 1rem 1rem 1rem;
-}
-
-.card-header{
-    margin: 1rem;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
+    overflow: hidden;
 }
 
 .card:hover{
     transform: scale(1.03);
     box-shadow: 0 0 12px black;
+    background-color: #a6a9c9;
 }
 
 .news-source{
