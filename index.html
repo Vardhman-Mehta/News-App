@@ -11,21 +11,21 @@
 
     <div class="navbar">
         <a href="#">
-            <img src="/assets/Logo1.jpeg" alt="Company Logo">
+            <img src="/assets/Logo1.jpeg" alt="Company Logo" id="company-logo">
         </a>
 
         <div class="nav-links">
             <ul>
-                <li class="hover-link">Sports</li>
-                <li class="hover-link">Politics</li>
-                <li class="hover-link">Education</li>
-                <li class="hover-link">Finance</li>
+                <li class="hover-link" id="sports">Sports</li>
+                <li class="hover-link" id="politics">Politics</li>
+                <li class="hover-link" id="education">Education</li>
+                <li class="hover-link" id="finance">Finance</li>
             </ul>
         </div>
 
         <div class="search-bar">
-            <input type="text" class="search-input" placeholder="eg Virat Kohli">
-            <button>
+            <input type="text" class="search-input" id="search-input" placeholder="eg Virat Kohli">
+            <button id="search-button">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
         </div>
@@ -33,26 +33,28 @@
 
     <div class="content">
         <div class="cards-container">
-            <template id="template-card">
-                <div class="card">
-                    <div class="card-header">
-                        <img src="https://via.placeholder.com/200x200" alt="news image">
-                    </div>
-                    <div class="card-content">
-                        <h3 id="news-title">This is the title</h3>
-                        <h6 class="news-source" id="news-source">End Gadget 29/9/2024</h6>
-                        <p class="news-description" id="news-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime libero laborum ea consequuntur est consequatur facere inventore dolores dolore commodi?</p>
-                    </div>
-                </div>
-            </template>
+            
         </div>
     </div>
+
+    <template id="template-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/200x200" alt="news-image" id="news-image">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 29/9/2024</h6>
+                <p class="news-description" id="news-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime libero laborum ea consequuntur est consequatur facere inventore dolores dolore commodi?</p>
+            </div>
+        </div>
+    </template>
 
     <div class="footer">
 
     </div>
     
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
 </body>
 </html>
 
